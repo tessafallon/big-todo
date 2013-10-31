@@ -13,6 +13,10 @@ describe TodoList do
       visit todo_list_path(@list)
     end
 
+    it "should display the Todo List's name" do
+      page.should have_content @list.name
+    end
+
     it "should display complete todo items" do
       within("#todos") do
         page.should have_content 'Talk to DHH'
