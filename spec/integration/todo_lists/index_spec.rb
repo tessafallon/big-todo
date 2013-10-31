@@ -17,20 +17,9 @@ describe TodoList do
       visit todo_lists_path
     end
 
-    it "should have an ordered list of TodoLists in descending alphabetical order" do
-      todo_lists = all('li')
-      todo_lists.count.should == 2
-
-      expect(todo_lists[0]).to have_content @l1.name
-      expect(todo_lists[1]).to have_content @l2.name
-    end
-
-    it "should link to the todo list" do
-      todo_list_links = all('li a')
-      todo_list_links.count.should == 2
-
-      todo_list_links[0][:href].should == todo_list_path(@l1)
-      todo_list_links[1][:href].should == todo_list_path(@l2)
+    it "should display the todo list names linked to their pages" do
+      expect(page).to have_link(@l1.name, href: todo_list_path(@l1))
+      expect(page).to have_link(@l2.name, href: todo_list_path(@l2))
     end
 
     it "should have a form for creating new todo lists" do
