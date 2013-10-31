@@ -1,28 +1,15 @@
-== README
+---
+  tags: mvc, rails, tdd
+  languages: ruby
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# The Big Todo
 
-Things you may want to cover:
+## Deliverables
 
-* Ruby version
+Fork this repository. Deliver your solution in master.
 
-* System dependencies
+## Instructions
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Create a Todo List app that passes the integration tests. Don't worry about
+bells and whistles (unelss you want to).
