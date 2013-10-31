@@ -25,14 +25,6 @@ describe TodoList do
       expect(todo_lists[1]).to have_content @l2.name
     end
 
-    it "should display the number of todos each todo list has" do
-      todo_lists = all('li')
-      todo_lists.count.should == 2
-
-      expect(todo_lists[0]).to have_content @l1.todos.count
-      expect(todo_lists[1]).to have_content @l2.todos.count
-    end
-
     it "should link to the todo list" do
       todo_list_links = all('li a')
       todo_list_links.count.should == 2
