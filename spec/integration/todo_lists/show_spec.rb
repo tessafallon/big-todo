@@ -25,5 +25,14 @@ describe TodoList do
         page.should have_content 'Finish todo app'
       end
     end
+
+    it "should have a form for creating new todos" do
+      todo_name = 'See Keanu'
+
+      fill_in(:todo_name, with: todo_name)
+      click_button('Create Todo')
+
+      expect(page).to have_content(todo_name)
+    end
   end
 end
