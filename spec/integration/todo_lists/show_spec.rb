@@ -5,10 +5,10 @@ describe TodoList do
     before do
       @list = TodoList.create(name: 'Best Day Ever')
 
-      @t1 = @list.todos.create(name: 'Michael Jackson zombie flash mob', complete: true)
-      @t2 = @list.todos.create(name: 'Rob Zombie pop singer flash mob', complete: false)
-      @t3 = @list.todos.create(name: 'Talk to DHH', complete: true)
-      @t4 = @list.todos.create(name: 'Finish todo app', complete: false)
+      @t1 = @list.todos.create(name: 'Michael Jackson zombie flash mob')
+      @t2 = @list.todos.create(name: 'Rob Zombie pop singer flash mob')
+      @t3 = @list.todos.create(name: 'Talk to DHH')
+      @t4 = @list.todos.create(name: 'Finish todo app')
 
       visit todo_list_path(@list)
     end
