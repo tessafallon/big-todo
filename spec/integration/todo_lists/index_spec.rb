@@ -40,5 +40,14 @@ describe TodoList do
       todo_list_links[0][:href].should == todo_list_path(@l1)
       todo_list_links[1][:href].should == todo_list_path(@l2)
     end
+
+    it "should have a form for creating new todo lists" do
+      todo_list_name = 'New York City bucket list'
+
+      fill_in(:todo_list_name, with: todo_list_name)
+      click_button('Create Todo list')
+
+      expect(page).to have_content(todo_list_name)
+    end
   end
 end
