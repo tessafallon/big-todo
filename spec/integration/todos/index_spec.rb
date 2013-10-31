@@ -14,20 +14,26 @@ describe "todos" do
     describe "todo list" do
       it "should display uncomplete todo items" do
         within("#incomplete") do
-          should have_content 'Rob Zombie pop singer flash mob'
-          should have_content 'Finish todo app'
+          page.should have_content 'Rob Zombie pop singer flash mob'
+          page.should have_content 'Finish todo app'
+
+          page.should_not have_content 'Talk to DHH'
+          page.should_not have_content 'Michael Jackson zombie flash mob'
         end
       end
 
       it "should display complete todo items" do
         within("#complete") do
-          should have_content 'Talk to DHH'
-          should have_content 'Michael Jackson zombie flash mob'
+          page.should have_content 'Talk to DHH'
+          page.should have_content 'Michael Jackson zombie flash mob'
+
+          page.should_not have_content 'Rob Zombie pop singer flash mob'
+          page.should_not have_content 'Finish todo app'
         end
       end
 
       it "should link to a page for creating new todos" do
-        expect(page).to have_link(href: new_todo_path)
+        expect(page).to have_link('Create todo', href: new_todo_path)
       end
 
       it "should have a button for marking todo items as complete" do
