@@ -14,22 +14,11 @@ describe TodoList do
     end
 
     it "should display complete todo items" do
-      within("#complete") do
+      within("#todos") do
         page.should have_content 'Talk to DHH'
         page.should have_content 'Michael Jackson zombie flash mob'
-
-        page.should_not have_content 'Rob Zombie pop singer flash mob'
-        page.should_not have_content 'Finish todo app'
-      end
-    end
-
-    it "should display incomplete todo items" do
-      within("#incomplete") do
         page.should have_content 'Rob Zombie pop singer flash mob'
         page.should have_content 'Finish todo app'
-
-        page.should_not have_content 'Talk to DHH'
-        page.should_not have_content 'Michael Jackson zombie flash mob'
       end
     end
   end
