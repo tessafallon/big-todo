@@ -12,4 +12,4 @@ Fork this repository. Deliver your solution in master.
 ## Instructions
 
 Create a Todo List app that passes the integration tests. Don't worry about
-bells and whistles (unless you want to).
+features that aren't being tested.
