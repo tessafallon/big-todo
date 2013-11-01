@@ -17,7 +17,7 @@ describe TodoList do
       page.should have_content @list.name
     end
 
-    it "should display complete todo items" do
+    it "should display todo items" do
       within("#todos") do
         page.should have_content 'Talk to DHH'
         page.should have_content 'Michael Jackson zombie flash mob'
