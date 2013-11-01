@@ -1,6 +1,6 @@
 ---
-  tags: mvc, rails, tdd
-  languages: ruby
+tags: mvc, rails, tdd
+languages: ruby
 ---
 
 # The Big Todo
@@ -12,4 +12,4 @@ Fork this repository. Deliver your solution in master.
 ## Instructions
 
 Create a Todo List app that passes the integration tests. Don't worry about
-bells and whistles (unelss you want to).
+bells and whistles (unless you want to).
