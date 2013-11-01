@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe TodoList do
-  describe "index" do
+feature "TodoList" do
+  context "index" do
     before do
       @l1 = TodoList.create(name: 'Homeworks and Labs')
       @l2 = TodoList.create(name: 'Weekend Plans')

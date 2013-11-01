@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe TodoList do
-  describe "show" do
+feature "TodoList" do
+  context "show" do
     before do
       @list = TodoList.create(name: 'Best Day Ever')
 
