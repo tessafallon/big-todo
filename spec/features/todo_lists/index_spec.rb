@@ -4,15 +4,7 @@ describe TodoList do
   describe "index" do
     before do
       @l1 = TodoList.create(name: 'Homeworks and Labs')
-
-      @l1.todos.create(name: 'Pollywogs')
-      @l1.todos.create(name: 'TV Land')
-      @l1.todos.create(name: 'The Big Todo')
-
       @l2 = TodoList.create(name: 'Weekend Plans')
-
-      @l2.todos.create(name: 'Play Magic: the Gathering')
-      @l2.todos.create(name: 'Eat a full brick of cheddar cheese with no beverage')
 
       visit todo_lists_path
     end
